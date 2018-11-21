@@ -10,5 +10,6 @@ package presidentapp;
  * @author x17381176
  */
 public class casey extends candidate{
-    
+    private String policy;
+    private String ethnicity;
 }
