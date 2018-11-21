@@ -10,5 +10,7 @@ package presidentapp;
  * @author x17381176
  */
 public class higgins extends candidate {
+    //Data
+    private String policy;
     
 }
