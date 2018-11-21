@@ -16,7 +16,8 @@ public class PresidentApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        presidentGUI myGUI=new presidentGUI();
+        myGUI.setVisible(true);
         
         
     }
