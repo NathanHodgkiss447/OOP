@@ -16,14 +16,14 @@ public class candidate {
     private int age;
     private String sex;
     private String party;
-
+    //constructor
     public candidate() {
         this.name = "";
         this.age = 0;
         this.sex = "";
         this.party = "";
     }
-
+    //set
     public void setName(String name) {
         this.name = name;
     }
@@ -39,7 +39,7 @@ public class candidate {
     public void setParty(String party) {
         this.party = party;
     }
-
+    //get
     public String getName() {
         return name;
     }
