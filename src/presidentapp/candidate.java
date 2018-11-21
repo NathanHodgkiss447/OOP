@@ -15,6 +15,10 @@ public class candidate {
     private int age;
     private String sex;
     private String party;
-    
-    //Whoisnathanhodgkiss???
+ 
+    public Student(){
+this.name="";
+this.age=0;
+this.grade=0.0;
+}
 }
