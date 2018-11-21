@@ -16,5 +16,5 @@ public class candidate {
     private String sex;
     private String party;
     
-    
+    //Whoisnathanhodgkiss???
 }
