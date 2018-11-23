@@ -9,6 +9,7 @@ package presidentapp;
  *
  * @author x17381176
  */
+
 public class riada extends candidate{
     //Data
     private String policy;
