@@ -75,6 +75,11 @@ public class president2GUI extends javax.swing.JFrame {
         jLabel2.setText("     Vote for :");
 
         leaderTX.setText("use a polymorphic array");
+        leaderTX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leaderTXActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 14)); // NOI18N
         jLabel3.setText("Leader board");
@@ -147,6 +152,10 @@ public class president2GUI extends javax.swing.JFrame {
     private void riadaBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riadaBTActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_riadaBTActionPerformed
+
+    private void leaderTXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leaderTXActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leaderTXActionPerformed
 
     /**
      * @param args the command line arguments

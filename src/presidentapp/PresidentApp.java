@@ -22,6 +22,9 @@ public class PresidentApp {
        president2GUI myGUI2=new president2GUI();
         myGUI2.setVisible(true);
         
+        president3GUI myGUI3=new president3GUI();
+        myGUI3.setVisible(true);
+        
         
     }
     
