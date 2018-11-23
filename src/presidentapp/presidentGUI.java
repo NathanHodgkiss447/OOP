@@ -5,6 +5,8 @@
  */
 package presidentapp;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author x17381176
@@ -23,6 +25,9 @@ public class presidentGUI extends javax.swing.JFrame {
     private String policy;
     private double budget;
     private String advertisement;
+    private String nameU;
+    private String pps;
+    private int ageU;
     
     
     
@@ -151,9 +156,22 @@ public class presidentGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_ageTActionPerformed
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
-        // TODO add your handling code here:
+        //Taking in class
+        voter v;
+        v=new voter();
+        
+        //Validating inputs
         if(name!=""){
-            if()
+            if(pps.length()==8){
+                if (pps.charAt(9)=='a'){
+                    
+                   
+                }
+            }
+            
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Please enter your name");
         }
         
         

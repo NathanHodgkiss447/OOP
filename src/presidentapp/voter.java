@@ -13,7 +13,7 @@ public class voter {
     //Data
     private String nameU;
     private String pps;
-    private int age;
+    private int ageU;
     
     //Constructor
     public voter(){
