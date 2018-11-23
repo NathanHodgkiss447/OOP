@@ -127,8 +127,13 @@ public class president2GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_gallagherBTActionPerformed
 
     private void caseyBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caseyBTActionPerformed
-      casey = casey + 1;
+      if(caseyBT.isSelected()){
+         
+        casey = casey + 1;
       JOptionPane.showMessageDialog(null,"Thanks for voting");
+      JOptionPane.showMessageDialog(null,casey);
+      }
+     
     }//GEN-LAST:event_caseyBTActionPerformed
 
     /**
