@@ -15,7 +15,7 @@ public class casey extends candidate{
 
 
     //Constructor
-    public candidate(){
+    public casey(){
     policy="";
     budget="";
 }
