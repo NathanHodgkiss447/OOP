@@ -16,13 +16,23 @@ public class candidate {
     private int age;
     private String sex;
     private String party;
-    //constructor
-    public candidate() {
-        this.name = "";
-        this.age = 0;
-        this.sex = "";
-        this.party = "";
+    
+    //Constructor
+    public candidate(){
+        name="";
+        age=0;
+        sex="";
+        party="";
     }
+    
+    //Super constructor
+    public candidate(String name, int age, String sex, String party) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.party = party;
+    }
+
     //set
     public void setName(String name) {
         this.name = name;

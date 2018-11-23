@@ -12,6 +12,40 @@ package presidentapp;
 public class gallagher extends candidate {
     //Data
     private String policy;
-    private String budget;
+    private Double budget;
+    
+    //Constructor
+    public gallagher(){
+        policy="";
+        budget=0.0;
+    }
+
+    //Super constructor
+    public gallagher(String policy, Double budget, String name, int age, String sex, String party) {
+        super(name, age, sex, party);
+        this.policy = policy;
+        this.budget = budget;
+    }
+    
+    //Set & Get Methods
+    public String getPolicy() {
+        return policy;
+    }
+
+    public void setPolicy(String policy) {
+        this.policy = policy;
+    }
+
+    public Double getBudget() {
+        return budget;
+    }
+
+    public void setBudget(Double budget) {
+        this.budget = budget;
+    }
+    
+    
+    
+    
     
 }
