@@ -58,6 +58,11 @@ public class president2GUI extends javax.swing.JFrame {
         higginsBT.setText("Higgins");
 
         riadaBT.setText("Riada");
+        riadaBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                riadaBTActionPerformed(evt);
+            }
+        });
 
         gallagherBT.setText("Gallagher");
         gallagherBT.addActionListener(new java.awt.event.ActionListener() {
@@ -127,14 +132,21 @@ public class president2GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_gallagherBTActionPerformed
 
     private void caseyBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caseyBTActionPerformed
-      if(caseyBT.isSelected()){
+      
          
         casey = casey + 1;
-      JOptionPane.showMessageDialog(null,"Thanks for voting");
-      JOptionPane.showMessageDialog(null,casey);
-      }
-     
+      
+      JOptionPane.showMessageDialog(null,"You have sucessfully voted");
+      
+        caseyBT.setVisible(false);
+         higginsBT.setVisible(false);
+          gallagherBT.setVisible(false);
+           riadaBT.setVisible(false);
     }//GEN-LAST:event_caseyBTActionPerformed
+
+    private void riadaBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riadaBTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_riadaBTActionPerformed
 
     /**
      * @param args the command line arguments
