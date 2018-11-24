@@ -161,7 +161,7 @@ public class presidentGUI extends javax.swing.JFrame {
         v=new voter();
         
         //Validating inputs
-        if(name!=""){
+        if(nameU!=""){
             if(pps.length()==8){
                 if(pps.charAt(9)=='A'||pps.charAt(9)=='B'||pps.charAt(9)=='C'||pps.charAt(9)=='D'||pps.charAt(9)=='E'||pps.charAt(9)=='F'||pps.charAt(9)=='G'||pps.charAt(9)=='H'||pps.charAt(9)=='I'||pps.charAt(9)=='J'||pps.charAt(9)=='K'||pps.charAt(9)=='L'||pps.charAt(9)=='M'||
                    pps.charAt(9)=='N'||pps.charAt(9)=='O'||pps.charAt(9)=='P'||pps.charAt(9)=='Q'||pps.charAt(9)=='R'||pps.charAt(9)=='S'||pps.charAt(9)=='T'||pps.charAt(9)=='U'||pps.charAt(9)=='V'||pps.charAt(9)=='W'||pps.charAt(9)=='B'||pps.charAt(9)=='X'||pps.charAt(9)=='Y'||pps.charAt(9)=='B'||pps.charAt(9)=='Z')
