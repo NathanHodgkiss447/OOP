@@ -19,7 +19,7 @@ public class voter {
     public voter(){
         nameU="";
         pps="";
-        age=0;
+        ageU=0;
     }
     
     //Set & Get methods
@@ -39,13 +39,14 @@ public class voter {
         this.pps = pps;
     }
 
-    public int getAge() {
-        return age;
+    public int getAgeU() {
+        return ageU;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAgeU(int ageU) {
+        this.ageU = ageU;
     }
+   
     
     
     
