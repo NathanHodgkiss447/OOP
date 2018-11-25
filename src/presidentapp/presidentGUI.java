@@ -160,6 +160,12 @@ public class presidentGUI extends javax.swing.JFrame {
         voter v;
         v=new voter();
         
+        
+        
+        
+        president3GUI P3=new president3GUI();
+    
+        P3.setVisible(true);
         //Validating inputs
         if(nameU!=""){
             if(pps.length()==8){
