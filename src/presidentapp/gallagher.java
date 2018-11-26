@@ -5,6 +5,8 @@
  */
 package presidentapp;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author x17381176
@@ -27,6 +29,12 @@ public class gallagher extends candidate {
         this.policy = policy;
         this.budget = budget;
     }
+    
+    @Override
+    public void description(){
+        JOptionPane.showMessageDialog(null,"Thank you for voting for Gallagher");
+    }
+    
    
     
     //Set & Get Methods

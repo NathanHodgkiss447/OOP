@@ -16,7 +16,6 @@ public class presidentGUI extends javax.swing.JFrame {
     /**
      * Creates new form presidentGUI
      */
-    
     //Data
     private String name;
     private int age;
@@ -28,20 +27,20 @@ public class presidentGUI extends javax.swing.JFrame {
     private String nameU;
     private String pps;
     private int ageU;
-    
-    
-    
+
     //Constructor
     public presidentGUI() {
         initComponents();
-        name="";
-        age=0;
-        sex="";
-        party="";
-        policy="";
-        budget=0.0;
-        advertisement="";
+        name = "";
+        age = 0;
+        sex = "";
+        party = "";
+        policy = "";
+        budget = 0.0;
+        advertisement = "";
     }
+//objects
+    president3GUI P3 = new president3GUI();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -158,49 +157,42 @@ public class presidentGUI extends javax.swing.JFrame {
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         //Taking in class
         voter v;
-        v=new voter();
-        
-        this.dispose();
-        
-        
-        
-        president3GUI P3=new president3GUI();
-    
-        P3.setVisible(true);
+        v = new voter();
+
         //Validating inputs
-        if(nameU!=""){
-            if(pps.length()==8){
-                if(pps.charAt(9)=='A'||pps.charAt(9)=='B'||pps.charAt(9)=='C'||pps.charAt(9)=='D'||pps.charAt(9)=='E'||pps.charAt(9)=='F'||pps.charAt(9)=='G'||pps.charAt(9)=='H'||pps.charAt(9)=='I'||pps.charAt(9)=='J'||pps.charAt(9)=='K'||pps.charAt(9)=='L'||pps.charAt(9)=='M'||
-                   pps.charAt(9)=='N'||pps.charAt(9)=='O'||pps.charAt(9)=='P'||pps.charAt(9)=='Q'||pps.charAt(9)=='R'||pps.charAt(9)=='S'||pps.charAt(9)=='T'||pps.charAt(9)=='U'||pps.charAt(9)=='V'||pps.charAt(9)=='W'||pps.charAt(9)=='B'||pps.charAt(9)=='X'||pps.charAt(9)=='Y'||pps.charAt(9)=='B'||pps.charAt(9)=='Z')
-                    {
-                        if(ageU>=18){
-                            JOptionPane.showMessageDialog(null, "Thanks for voting!");
-                        }
-                        else{
-                            JOptionPane.showMessageDialog(null, "Must be 18 or older to vote.");
-                        }
-                    
-                   
-                }
-                else{
+        if (nameU != null) {
+            if (pps.length() == 8) {
+                if (pps.charAt(9) == 'A' || pps.charAt(9) == 'B' || pps.charAt(9) == 'C' || pps.charAt(9) == 'D' || pps.charAt(9) == 'E' || pps.charAt(9) == 'F' || pps.charAt(9) == 'G' || pps.charAt(9) == 'H' || pps.charAt(9) == 'I' || pps.charAt(9) == 'J' || pps.charAt(9) == 'K' || pps.charAt(9) == 'L' || pps.charAt(9) == 'M'
+                        || pps.charAt(9) == 'N' || pps.charAt(9) == 'O' || pps.charAt(9) == 'P' || pps.charAt(9) == 'Q' || pps.charAt(9) == 'R' || pps.charAt(9) == 'S' || pps.charAt(9) == 'T' || pps.charAt(9) == 'U' || pps.charAt(9) == 'V' || pps.charAt(9) == 'W' || pps.charAt(9) == 'B' || pps.charAt(9) == 'X' || pps.charAt(9) == 'Y' || pps.charAt(9) == 'B' || pps.charAt(9) == 'Z') {
+                    if (ageU >= 18) {
+                        JOptionPane.showMessageDialog(null, "Thanks for voting!");
+                        this.dispose();
+                        P3.setVisible(true);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Must be 18 or older to vote.");
+                        
+                        P3.setVisible(false);
+                    }
+
+                } else {
                     JOptionPane.showMessageDialog(null, "Last digit must be a letter.");
+                    
+                    P3.setVisible(false);
                 }
-            }
-            else{
+            } else {
                 JOptionPane.showMessageDialog(null, "PPS must be 8 digits long.");
+                
+                P3.setVisible(false);
             }
-            
-        }
-        else{
+
+        } else {
             JOptionPane.showMessageDialog(null, "Please enter your name.");
+            
+            P3.setVisible(false);
+
         }
-        
-        
-        
-        
-        
-        
-        
+
+
     }//GEN-LAST:event_submitBtnActionPerformed
 
     /**

@@ -5,6 +5,8 @@
  */
 package presidentapp;
 
+import javax.swing.JOptionPane;
+
 
 
 /**
@@ -47,7 +49,10 @@ public class candidate {
         this.riadaS = riadaS;
     }
 
-   
+    //polymorphism
+    public void description(){
+        JOptionPane.showMessageDialog(null,"now you are entering the vote page");
+    }
     
 
     //set

@@ -14,6 +14,9 @@ public class president3GUI extends javax.swing.JFrame {
     /**
      * Creates new form presidentGUI3
      */
+    //object
+    candidate c1 =new candidate();
+    
     public president3GUI() {
         initComponents();
     }
@@ -184,9 +187,14 @@ public class president3GUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
+        c1.description();
+        
         president2GUI P2=new president2GUI();
     
         P2.setVisible(true);
+        
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

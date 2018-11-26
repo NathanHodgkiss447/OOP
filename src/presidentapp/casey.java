@@ -5,6 +5,8 @@
  */
 package presidentapp;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author x17381176
@@ -28,7 +30,10 @@ public class casey extends candidate {
     }
    
 
-   
+       @Override
+    public void description(){
+        JOptionPane.showMessageDialog(null,"Thank you for voting for Casey");
+    }
 
     //Set & Get Methods
     public String getPolicy() {

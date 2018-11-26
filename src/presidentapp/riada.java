@@ -5,6 +5,8 @@
  */
 package presidentapp;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author x17381176
@@ -31,7 +33,10 @@ public class riada extends candidate{
     
     
     //example of polymorphism
- 
+     @Override
+    public void description(){
+        JOptionPane.showMessageDialog(null,"Thank you for voting for Riada");
+    }
         
     
     public String getPolicy() {

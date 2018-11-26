@@ -229,8 +229,8 @@ public class president2GUI extends javax.swing.JFrame {
         //takig vote in and converting it to string
         gallagher = gallagher + 1;
         gallagherS = Integer.toString(gallagher);
-
-        JOptionPane.showMessageDialog(null, "You have sucessfully voted");
+        //example ogf polymorphism
+        g.description();
 
         //making voting pole disapear
         caseyBT.setVisible(false);
@@ -249,13 +249,9 @@ public class president2GUI extends javax.swing.JFrame {
     private void caseyBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caseyBTActionPerformed
         //takig votes in and converting it to string
         casey = casey + 1;
-        // caseyS = Integer.toString(casey);
-        //higginsS = Integer.toString(higgins);
-        //riadaS = Integer.toString(riada);
-        //gallagherS = Integer.toString(gallagher);
 
-        //showing that vote has been submited
-        JOptionPane.showMessageDialog(null, "You have sucessfully voted");
+        //example ogf polymorphism
+        c2.description();
 
         //making voting pole disapear
         caseyBT.setVisible(false);
@@ -274,8 +270,8 @@ public class president2GUI extends javax.swing.JFrame {
     private void riadaBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riadaBTActionPerformed
         //takig vote in and converting it to string
         riada = riada + 1;
-
-        JOptionPane.showMessageDialog(null, "You have sucessfully voted");
+        //example ogf polymorphism
+        r.description();
 
         //making voting pole disapear
         caseyBT.setVisible(false);
@@ -294,8 +290,8 @@ public class president2GUI extends javax.swing.JFrame {
         //takig vote in and converting it to string
         higgins = higgins + 1;
         higginsS = Integer.toString(higgins);
-
-        JOptionPane.showMessageDialog(null, "You have sucessfully voted");
+        //example ogf polymorphism
+        h.description();
 
         //making voting pole disapear
         caseyBT.setVisible(false);
@@ -312,12 +308,12 @@ public class president2GUI extends javax.swing.JFrame {
 
     private void updateBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBTActionPerformed
         JOptionPane.showMessageDialog(null, "its working");
-
-        caseyLB.setText(Integer.toString(vote[0]));
-        higginsLB.setText(Integer.toString(vote[1]));
-        riadaLB.setText(Integer.toString(vote[2]));
-        gallagherLB.setText(Integer.toString(vote[3]));
-
+        for (int i = 0; i < vote.length; i++) {
+            caseyLB.setText(Integer.toString(vote[0]));
+            higginsLB.setText(Integer.toString(vote[1]));
+            riadaLB.setText(Integer.toString(vote[2]));
+            gallagherLB.setText(Integer.toString(vote[3]));
+        }
 
     }//GEN-LAST:event_updateBTActionPerformed
 
