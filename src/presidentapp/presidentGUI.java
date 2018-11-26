@@ -160,6 +160,7 @@ public class presidentGUI extends javax.swing.JFrame {
         voter v;
         v=new voter();
         
+        this.dispose();
         
         
         
