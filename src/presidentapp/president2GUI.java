@@ -5,7 +5,6 @@
  */
 package presidentapp;
 
-
 import javax.swing.JOptionPane;
 
 /**
@@ -26,18 +25,15 @@ public class president2GUI extends javax.swing.JFrame {
 
     //array
     int vote[] = new int[3];
-    
-    
+
     casey c2 = new casey();
     riada r = new riada();
     higgins h = new higgins();
     gallagher g = new gallagher();
 
-    
     public president2GUI() {
         initComponents();
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -234,13 +230,6 @@ public class president2GUI extends javax.swing.JFrame {
         gallagher = gallagher + 1;
         gallagherS = Integer.toString(gallagher);
 
-        //set
-        c2.setCaseyS(caseyS);
-        h.setHigginsS(higginsS);
-        r.setRiadaS(riadaS);
-        g.setGallagherS(gallagherS);
-
-        //showing that vote has been submited
         JOptionPane.showMessageDialog(null, "You have sucessfully voted");
 
         //making voting pole disapear
@@ -248,21 +237,22 @@ public class president2GUI extends javax.swing.JFrame {
         higginsBT.setVisible(false);
         gallagherBT.setVisible(false);
         riadaBT.setVisible(false);
+
+        //stroing data into an array
+        vote[0] = casey;
+        vote[1] = higgins;
+        vote[2] = riada;
+        vote[3] = gallagher;
 
     }//GEN-LAST:event_gallagherBTActionPerformed
 
     private void caseyBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caseyBTActionPerformed
         //takig votes in and converting it to string
         casey = casey + 1;
-       // caseyS = Integer.toString(casey);
+        // caseyS = Integer.toString(casey);
         //higginsS = Integer.toString(higgins);
         //riadaS = Integer.toString(riada);
         //gallagherS = Integer.toString(gallagher);
-
-        //set
-        
-       
-        
 
         //showing that vote has been submited
         JOptionPane.showMessageDialog(null, "You have sucessfully voted");
@@ -272,26 +262,19 @@ public class president2GUI extends javax.swing.JFrame {
         higginsBT.setVisible(false);
         gallagherBT.setVisible(false);
         riadaBT.setVisible(false);
-        
-        
-         vote[0] = casey;
+
+        //stroing data into an array
+        vote[0] = casey;
         vote[1] = higgins;
         vote[2] = riada;
         vote[3] = gallagher;
+
     }//GEN-LAST:event_caseyBTActionPerformed
 
     private void riadaBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riadaBTActionPerformed
         //takig vote in and converting it to string
         riada = riada + 1;
-        riadaS = Integer.toString(riada);
 
-        //set
-        c2.setCaseyS(caseyS);
-        h.setHigginsS(higginsS);
-        r.setRiadaS(riadaS);
-        g.setGallagherS(gallagherS);
-
-        //showing that vote has been submited
         JOptionPane.showMessageDialog(null, "You have sucessfully voted");
 
         //making voting pole disapear
@@ -299,6 +282,12 @@ public class president2GUI extends javax.swing.JFrame {
         higginsBT.setVisible(false);
         gallagherBT.setVisible(false);
         riadaBT.setVisible(false);
+
+        //stroing data into an array
+        vote[0] = casey;
+        vote[1] = higgins;
+        vote[2] = riada;
+        vote[3] = gallagher;
     }//GEN-LAST:event_riadaBTActionPerformed
 
     private void higginsBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_higginsBTActionPerformed
@@ -306,13 +295,6 @@ public class president2GUI extends javax.swing.JFrame {
         higgins = higgins + 1;
         higginsS = Integer.toString(higgins);
 
-        //set
-        c2.setCaseyS(caseyS);
-        h.setHigginsS(higginsS);
-        r.setRiadaS(riadaS);
-        g.setGallagherS(gallagherS);
-
-        //showing that vote has been submited
         JOptionPane.showMessageDialog(null, "You have sucessfully voted");
 
         //making voting pole disapear
@@ -320,24 +302,30 @@ public class president2GUI extends javax.swing.JFrame {
         higginsBT.setVisible(false);
         gallagherBT.setVisible(false);
         riadaBT.setVisible(false);
+
+        //stroing data into an array
+        vote[0] = casey;
+        vote[1] = higgins;
+        vote[2] = riada;
+        vote[3] = gallagher;
     }//GEN-LAST:event_higginsBTActionPerformed
 
     private void updateBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBTActionPerformed
-       JOptionPane.showMessageDialog(null,"its working");
-       
+        JOptionPane.showMessageDialog(null, "its working");
+
         caseyLB.setText(Integer.toString(vote[0]));
         higginsLB.setText(Integer.toString(vote[1]));
         riadaLB.setText(Integer.toString(vote[2]));
         gallagherLB.setText(Integer.toString(vote[3]));
-        
-       
+
+
     }//GEN-LAST:event_updateBTActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
+
 
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
