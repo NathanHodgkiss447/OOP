@@ -22,6 +22,19 @@ public class riada extends candidate{
     }
     
     //Super Constructor
+
+    public riada(String policy, String advertisement, String name, int age, String sex, String party, String caseyS, String gallagherS, String higginsS, String riadaS) {
+        super(name, age, sex, party, caseyS, gallagherS, higginsS, riadaS);
+        this.policy = policy;
+        this.advertisement = advertisement;
+    }
+    
+    
+    //example of polymorphism
+        public void vote(){
+           P2.riadaLB.setText(riadaS); 
+        }
+    
     public String getPolicy() {
         return policy;
     }

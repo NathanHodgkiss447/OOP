@@ -1,5 +1,5 @@
 
- /* To change this license header, choose License Headers in Project Properties.
+/* To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -9,24 +9,27 @@ package presidentapp;
  *
  * @author x17381176
  */
-public class casey extends candidate{
+public class casey extends candidate {
+
     private String policy;
     private String budget;
 
-
     //Constructor
-    public casey(){
-    policy="";
-    budget="";
-}
+    public casey() {
+        policy = "";
+        budget = "";
+    }
 
     //Super Constructor
-    public casey(String policy, String ethnicity, String name, int age, String sex, String party) {
-        super(name, age, sex, party);
+    public casey(String policy, String budget, String name, int age, String sex, String party, String caseyS, String gallagherS, String higginsS, String riadaS) {
+        super(name, age, sex, party, caseyS, gallagherS, higginsS, riadaS);
         this.policy = policy;
-        this.budget = ethnicity;
+        this.budget = budget;
     }
-    
+   
+
+   
+
     //Set & Get Methods
     public String getPolicy() {
         return policy;
@@ -43,10 +46,5 @@ public class casey extends candidate{
     public void setEthnicity(String ethnicity) {
         this.budget = ethnicity;
     }
-    
-
-
-
 
 }
-

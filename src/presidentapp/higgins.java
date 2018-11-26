@@ -21,11 +21,13 @@ public class higgins extends candidate {
     }
     
     //Super Constructor
-    public higgins(String policy, Double budget, String name, int age, String sex, String party) {
-        super(name, age, sex, party);
+
+    public higgins(String policy, Double budget, String name, int age, String sex, String party, String caseyS, String gallagherS, String higginsS, String riadaS) {
+        super(name, age, sex, party, caseyS, gallagherS, higginsS, riadaS);
         this.policy = policy;
         this.budget = budget;
     }
+    
     
     //Set & Get Methods
     public String getPolicy() {
