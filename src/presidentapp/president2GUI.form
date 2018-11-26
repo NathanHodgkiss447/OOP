@@ -253,9 +253,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="8"/>
       </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="caseyLB">
       <Properties>
@@ -264,9 +261,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="5"/>
       </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="riadaLB">
       <Properties>
@@ -275,9 +269,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="6"/>
       </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="gallagherLB">
       <Properties>
@@ -286,9 +277,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="2"/>
       </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

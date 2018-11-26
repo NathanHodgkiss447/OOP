@@ -5,9 +5,7 @@
  */
 package presidentapp;
 
-import static java.nio.file.Files.list;
-import static java.rmi.Naming.list;
-import static java.util.Collections.list;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -26,15 +24,16 @@ public class president2GUI extends javax.swing.JFrame {
     String riadaS = "";
     String gallagherS = "";
 
-    //objects
-    PresidentApp p = new PresidentApp();
-    candidate c1 = new candidate();
+    //array
+    int vote[] = new int[3];
+    
+    
     casey c2 = new casey();
     riada r = new riada();
     higgins h = new higgins();
     gallagher g = new gallagher();
 
-    //pa
+    
     public president2GUI() {
         initComponents();
     }
@@ -253,15 +252,17 @@ public class president2GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_gallagherBTActionPerformed
 
     private void caseyBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caseyBTActionPerformed
-        //takig vote in and converting it to string
+        //takig votes in and converting it to string
         casey = casey + 1;
-        caseyS = Integer.toString(casey);
+       // caseyS = Integer.toString(casey);
+        //higginsS = Integer.toString(higgins);
+        //riadaS = Integer.toString(riada);
+        //gallagherS = Integer.toString(gallagher);
 
         //set
-        c2.setCaseyS(caseyS);
-        h.setHigginsS(higginsS);
-        r.setRiadaS(riadaS);
-        g.setGallagherS(gallagherS);
+        
+       
+        
 
         //showing that vote has been submited
         JOptionPane.showMessageDialog(null, "You have sucessfully voted");
@@ -271,6 +272,12 @@ public class president2GUI extends javax.swing.JFrame {
         higginsBT.setVisible(false);
         gallagherBT.setVisible(false);
         riadaBT.setVisible(false);
+        
+        
+         vote[0] = casey;
+        vote[1] = higgins;
+        vote[2] = riada;
+        vote[3] = gallagher;
     }//GEN-LAST:event_caseyBTActionPerformed
 
     private void riadaBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riadaBTActionPerformed
@@ -316,10 +323,14 @@ public class president2GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_higginsBTActionPerformed
 
     private void updateBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBTActionPerformed
-        c2.vote();
-        r.vote();
-        h.vote();
-        g.vote();
+       JOptionPane.showMessageDialog(null,"its working");
+       
+        caseyLB.setText(Integer.toString(vote[0]));
+        higginsLB.setText(Integer.toString(vote[1]));
+        riadaLB.setText(Integer.toString(vote[2]));
+        gallagherLB.setText(Integer.toString(vote[3]));
+        
+       
     }//GEN-LAST:event_updateBTActionPerformed
 
     /**
@@ -362,11 +373,11 @@ public class president2GUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton caseyBT;
-    public javax.swing.JLabel caseyLB;
+    private javax.swing.JLabel caseyLB;
     private javax.swing.JButton gallagherBT;
-    public javax.swing.JLabel gallagherLB;
+    private javax.swing.JLabel gallagherLB;
     private javax.swing.JButton higginsBT;
-    public javax.swing.JLabel higginsLB;
+    private javax.swing.JLabel higginsLB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -375,7 +386,7 @@ public class president2GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JButton riadaBT;
-    public javax.swing.JLabel riadaLB;
+    private javax.swing.JLabel riadaLB;
     private javax.swing.JButton updateBT;
     // End of variables declaration//GEN-END:variables
 }

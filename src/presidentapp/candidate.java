@@ -5,9 +5,7 @@
  */
 package presidentapp;
 
-import static java.nio.file.Files.list;
-import static java.rmi.Naming.list;
-import static java.util.Collections.list;
+
 
 /**
  *
@@ -48,24 +46,8 @@ public class candidate {
         this.higginsS = higginsS;
         this.riadaS = riadaS;
     }
-    
+
     //object
-    president2GUI P2=new president2GUI();
-   
-        //example of polymorphism
-        public void vote(){
-          P2.riadaLB.setText(riadaS);
-          P2.higginsLB.setText(higginsS);
-          P2.caseyLB.setText(caseyS);
-          P2.gallagherLB.setText(gallagherS);
-            
-        }
-        
-        
-
-     
-
-        
     
 
     //set
@@ -133,7 +115,5 @@ public class candidate {
     public void setRiadaS(String riadaS) {
         this.riadaS = riadaS;
     }
-
-    
 
 }

@@ -31,9 +31,8 @@ public class riada extends candidate{
     
     
     //example of polymorphism
-        public void vote(){
-           P2.riadaLB.setText(riadaS); 
-        }
+ 
+        
     
     public String getPolicy() {
         return policy;
