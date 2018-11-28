@@ -19,11 +19,11 @@ public class PresidentApp {
         presidentGUI myGUI = new presidentGUI();
         myGUI.setVisible(true);
         
+        
           
 
        
         
-
     }
 
 }
