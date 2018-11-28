@@ -5,7 +5,10 @@
  */
 package presidentapp;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -22,6 +25,10 @@ public class president2GUI extends javax.swing.JFrame {
     String higginsS = "";
     String riadaS = "";
     String gallagherS = "";
+    String name;
+    String pps;
+    int age;
+    
 
     //array
     int vote[] = new int[3];
@@ -30,10 +37,50 @@ public class president2GUI extends javax.swing.JFrame {
     riada r = new riada();
     higgins h = new higgins();
     gallagher g = new gallagher();
+    private Object jTable1;
+    private ArrayList user;
 
     public president2GUI() {
+       
         initComponents();
+        listUser();
     }
+    
+    //objects
+    presidentGUI P = new presidentGUI();
+
+    private president2GUI(String name, int age, String pps) {
+        this.user = listUser();
+        this.P.name=name;
+        this.P.age=age;
+        this.P.pps=pps;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+     
+    /**
+     *
+     * @return
+     */
+    private ArrayList listUser(){
+       ArrayList<president2GUI> user = new ArrayList<>();
+       president2GUI u1 = new president2GUI(name,age,pps);
+       president2GUI u2 = new president2GUI(name,age,pps);
+       president2GUI u3 = new president2GUI(name,age,pps);
+       president2GUI u4 = new president2GUI(name,age,pps);
+       president2GUI u5 = new president2GUI(name,age,pps);
+       user.add(u1);
+       user.add(u2);
+       user.add(u3);
+       user.add(u4);
+       user.add(u5);
+       return user;
+    }
+    
+    
+    
+   
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,6 +107,7 @@ public class president2GUI extends javax.swing.JFrame {
         caseyLB = new javax.swing.JLabel();
         riadaLB = new javax.swing.JLabel();
         gallagherLB = new javax.swing.JLabel();
+        infoBT = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(0, 204, 204));
@@ -137,6 +185,13 @@ public class president2GUI extends javax.swing.JFrame {
         gallagherLB.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 14)); // NOI18N
         gallagherLB.setText("2");
 
+        infoBT.setText("jButton1");
+        infoBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                infoBTActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -173,6 +228,10 @@ public class president2GUI extends javax.swing.JFrame {
                             .addComponent(riadaLB, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(updateBT, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(210, 210, 210)
+                .addComponent(infoBT)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -219,7 +278,9 @@ public class president2GUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(higginsBT, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(updateBT, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(71, 71, 71))
+                .addGap(28, 28, 28)
+                .addComponent(infoBT)
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -313,9 +374,18 @@ public class president2GUI extends javax.swing.JFrame {
             higginsLB.setText(Integer.toString(vote[1]));
             riadaLB.setText(Integer.toString(vote[2]));
             gallagherLB.setText(Integer.toString(vote[3]));
+          
+             
         }
 
     }//GEN-LAST:event_updateBTActionPerformed
+
+    private void infoBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoBTActionPerformed
+       ArrayList<president2GUI> user = listUser();
+            for(int i = 0; i<user.size();i++){
+                JOptionPane.showMessageDialog(null,user.get(i).name);
+            }
+    }//GEN-LAST:event_infoBTActionPerformed
 
     /**
      * @param args the command line arguments
@@ -362,6 +432,7 @@ public class president2GUI extends javax.swing.JFrame {
     private javax.swing.JLabel gallagherLB;
     private javax.swing.JButton higginsBT;
     private javax.swing.JLabel higginsLB;
+    private javax.swing.JButton infoBT;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

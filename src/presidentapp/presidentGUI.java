@@ -18,15 +18,15 @@ public class presidentGUI extends javax.swing.JFrame {
      * Creates new form presidentGUI
      */
     //Data
-    private String name;
-    private int age;
+    protected String name;
+    protected int age;
     private String sex;
     private String party;
     private String policy;
     private double budget;
     private String advertisement;
     private String nameU;
-    private String pps;
+    protected String pps;
     private int ageU;
 
     //Constructor
@@ -48,15 +48,7 @@ public class presidentGUI extends javax.swing.JFrame {
     president3GUI P3 = new president3GUI();
     
     //arraylist
-    public presidentGUI(String name, int age, String pps){
-        this.name= name;
-        this.age = age;
-        this.pps = pps;
-    }
-    
-    public Arraylist listUser(){
-        
-    }
+  
 
     /**
      * This method is called from within the constructor to initialize the form.
