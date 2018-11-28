@@ -176,7 +176,7 @@ public class presidentGUI extends javax.swing.JFrame {
                         || pps.charAt(7) == 'N' || pps.charAt(7) == 'O' || pps.charAt(7) == 'P' || pps.charAt(7) == 'Q' || pps.charAt(7) == 'R' || pps.charAt(7) == 'S' || pps.charAt(7) == 'T' || pps.charAt(7) == 'U' || pps.charAt(7) == 'V' || pps.charAt(7) == 'W' || pps.charAt(7) == 'X' || pps.charAt(7) == 'Y' || pps.charAt(7) == 'Z') {
                     
                     if (ageU >= 18) {
-                        JOptionPane.showMessageDialog(null, "Thanks for voting!");
+                        JOptionPane.showMessageDialog(null, "Thanks for entering your credentials!");
                         this.dispose();
                         P3.setVisible(true);
                     } else {
