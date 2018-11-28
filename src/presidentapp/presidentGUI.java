@@ -38,6 +38,10 @@ public class presidentGUI extends javax.swing.JFrame {
         policy = "";
         budget = 0.0;
         advertisement = "";
+        nameU="Blank";
+        pps="********";
+        ageU=0;
+                
     }
 //objects
     president3GUI P3 = new president3GUI();
@@ -65,13 +69,13 @@ public class presidentGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Franklin Gothic Book", 0, 18)); // NOI18N
         jLabel1.setText("Voting Form");
 
-        nameL.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 16)); // NOI18N
+        nameL.setFont(new java.awt.Font("Franklin Gothic Book", 0, 16)); // NOI18N
         nameL.setText("Name: ");
 
-        ppsL.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 16)); // NOI18N
+        ppsL.setFont(new java.awt.Font("Franklin Gothic Book", 0, 16)); // NOI18N
         ppsL.setText("PPS-Number: ");
 
         nameT.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +84,7 @@ public class presidentGUI extends javax.swing.JFrame {
             }
         });
 
-        ageL.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 16)); // NOI18N
+        ageL.setFont(new java.awt.Font("Franklin Gothic Book", 0, 16)); // NOI18N
         ageL.setText("Age:");
 
         ageT.addActionListener(new java.awt.event.ActionListener() {
@@ -89,6 +93,7 @@ public class presidentGUI extends javax.swing.JFrame {
             }
         });
 
+        submitBtn.setFont(new java.awt.Font("Franklin Gothic Book", 0, 15)); // NOI18N
         submitBtn.setText("Submit");
         submitBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,7 +123,7 @@ public class presidentGUI extends javax.swing.JFrame {
                         .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(155, Short.MAX_VALUE)
+                .addContainerGap(158, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(150, 150, 150))
         );
@@ -134,7 +139,7 @@ public class presidentGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ppsL)
                     .addComponent(ppsT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ageL)
                     .addComponent(ageT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -158,6 +163,7 @@ public class presidentGUI extends javax.swing.JFrame {
         //Taking in class
         voter v;
         v = new voter();
+        //Taking in input from text field and storing it to the variable.
         nameU=nameT.getText();
         pps=ppsT.getText();
         ageU=Integer.parseInt(ageT.getText());
@@ -168,6 +174,7 @@ public class presidentGUI extends javax.swing.JFrame {
             if (pps.length() == 8) {
                 if (pps.charAt(7) == 'A' || pps.charAt(7) == 'B' || pps.charAt(7) == 'C' || pps.charAt(7) == 'D' || pps.charAt(7) == 'E' || pps.charAt(7) == 'F' || pps.charAt(7) == 'G' || pps.charAt(7) == 'H' || pps.charAt(7) == 'I' || pps.charAt(7) == 'J' || pps.charAt(7) == 'K' || pps.charAt(7) == 'L' || pps.charAt(7) == 'M'
                         || pps.charAt(7) == 'N' || pps.charAt(7) == 'O' || pps.charAt(7) == 'P' || pps.charAt(7) == 'Q' || pps.charAt(7) == 'R' || pps.charAt(7) == 'S' || pps.charAt(7) == 'T' || pps.charAt(7) == 'U' || pps.charAt(7) == 'V' || pps.charAt(7) == 'W' || pps.charAt(7) == 'X' || pps.charAt(7) == 'Y' || pps.charAt(7) == 'Z') {
+                    
                     if (ageU >= 18) {
                         JOptionPane.showMessageDialog(null, "Thanks for voting!");
                         this.dispose();
@@ -177,6 +184,8 @@ public class presidentGUI extends javax.swing.JFrame {
                         
                         P3.setVisible(false);
                     }
+                    
+                    
 
                 } else {
                     JOptionPane.showMessageDialog(null, "Last digit must be a letter.");
@@ -198,6 +207,7 @@ public class presidentGUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_submitBtnActionPerformed
 
+    //Get Statements
     public String getNameU() {
         return nameU;
     }
