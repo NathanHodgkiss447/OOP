@@ -37,7 +37,7 @@ public class president2GUI extends javax.swing.JFrame {
     riada r = new riada();
     higgins h = new higgins();
     gallagher g = new gallagher();
-    private Object jTable1;
+   
     private ArrayList user;
 
     public president2GUI() {
