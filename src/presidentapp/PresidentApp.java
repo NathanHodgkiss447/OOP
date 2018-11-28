@@ -18,6 +18,10 @@ public class PresidentApp {
         // TODO code application logic here
         presidentGUI myGUI = new presidentGUI();
         myGUI.setVisible(true);
+         president2GUI P2=new president2GUI();
+    
+        P2.setVisible(true);
+        
         
         
           
