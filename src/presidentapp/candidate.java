@@ -54,6 +54,8 @@ public class candidate {
         JOptionPane.showMessageDialog(null,"now you are entering the vote page");
     }
     
+    
+    
 
     //set
     public void setName(String name) {

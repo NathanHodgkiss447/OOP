@@ -5,6 +5,7 @@
  */
 package presidentapp;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -45,6 +46,17 @@ public class presidentGUI extends javax.swing.JFrame {
     }
 //objects
     president3GUI P3 = new president3GUI();
+    
+    //arraylist
+    public presidentGUI(String name, int age, String pps){
+        this.name= name;
+        this.age = age;
+        this.pps = pps;
+    }
+    
+    public Arraylist listUser(){
+        
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
