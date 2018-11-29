@@ -25,9 +25,9 @@ public class presidentGUI extends javax.swing.JFrame {
     private String policy;
     private double budget;
     private String advertisement;
-    private String nameU;
-    protected String pps;
-    private int ageU;
+    public String nameU;
+    public String pps;
+    public int ageU;
 
     //Constructor
     public presidentGUI() {
@@ -171,7 +171,9 @@ public class presidentGUI extends javax.swing.JFrame {
         nameU=nameT.getText();
         pps=ppsT.getText();
         ageU=Integer.parseInt(ageT.getText());
-        
+         v.setNameU(nameU);
+         v.setPps(pps);
+         v.setAgeU(ageU);
 
         //Validating inputs
         if (nameU.length()>0) {

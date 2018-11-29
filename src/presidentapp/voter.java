@@ -11,9 +11,9 @@ package presidentapp;
  */
 public class voter {
     //Data
-    private String nameU;
-    private String pps;
-    private int ageU;
+    public String nameU;
+    public String pps;
+    public int ageU;
     
     //Constructor
     public voter(){
@@ -21,6 +21,14 @@ public class voter {
         pps="";
         ageU=0;
     }
+
+    public voter(String nameU, String pps, int ageU) {
+        this.nameU = nameU;
+        this.pps = pps;
+        this.ageU = ageU;
+    }
+    
+    
     
     //Set & Get methods
     public String getNameU() {
