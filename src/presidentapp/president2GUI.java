@@ -5,7 +5,17 @@
  */
 package presidentapp;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -28,8 +38,7 @@ public final class president2GUI extends javax.swing.JFrame {
     String pps;
     int age;
 
-    //array
-    int vote[] = new int[3];
+    //linking intangible/subclassed
     casey c2 = new casey();
     riada r = new riada();
     higgins h = new higgins();
@@ -37,7 +46,7 @@ public final class president2GUI extends javax.swing.JFrame {
     voter v = new voter();
 
     public president2GUI() {
-        details();
+
         initComponents();
 
     }
@@ -312,6 +321,10 @@ public final class president2GUI extends javax.swing.JFrame {
         //takig vote in and converting it to string
         gallagher = gallagher + 1;
         gallagherS = Integer.toString(gallagher);
+        caseyS = Integer.toString(casey);
+        riadaS = Integer.toString(riada);
+        higginsS = Integer.toString(higgins);
+
         //example ogf polymorphism
         g.description();
 
@@ -321,18 +334,39 @@ public final class president2GUI extends javax.swing.JFrame {
         gallagherBT.setVisible(false);
         riadaBT.setVisible(false);
 
-        //stroing data into an array
-        vote[0] = casey;
-        vote[1] = higgins;
-        vote[2] = riada;
-        vote[3] = gallagher;
+        //scanner
+        Scanner s = new Scanner(System.in);
+
+        //writing to a file
+        File outFile;
+        FileWriter fw;
+        BufferedWriter bw;
+
+        outFile = new File("vote.txt");
+
+        try {
+            fw = new FileWriter(outFile);
+            bw = new BufferedWriter(fw);
+            fw.write(gallagherS);
+            fw.write(caseyS);
+            fw.write(higginsS);
+            fw.write(riadaS);
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "opps didnt work");
+        }
+
 
     }//GEN-LAST:event_gallagherBTActionPerformed
 
     private void caseyBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caseyBTActionPerformed
         //takig votes in and converting it to string
         casey = casey + 1;
-
+        gallagherS = Integer.toString(gallagher);
+        caseyS = Integer.toString(casey);
+        riadaS = Integer.toString(riada);
+        higginsS = Integer.toString(higgins);
         //example ogf polymorphism
         c2.description();
 
@@ -342,17 +376,37 @@ public final class president2GUI extends javax.swing.JFrame {
         gallagherBT.setVisible(false);
         riadaBT.setVisible(false);
 
-        //stroing data into an array
-        vote[0] = casey;
-        vote[1] = higgins;
-        vote[2] = riada;
-        vote[3] = gallagher;
+        //writing to a file
+        File outFile;
+        FileWriter fw;
+        BufferedWriter bw;
+
+        outFile = new File("vote.txt");
+
+        try {
+            fw = new FileWriter(outFile);
+            bw = new BufferedWriter(fw);
+            fw.write(gallagherS);
+            fw.write(caseyS);
+            fw.write(higginsS);
+            fw.write(riadaS);
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "opps didnt work");
+        }
+
 
     }//GEN-LAST:event_caseyBTActionPerformed
 
     private void riadaBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riadaBTActionPerformed
         //takig vote in and converting it to string
         riada = riada + 1;
+        gallagherS = Integer.toString(gallagher);
+        caseyS = Integer.toString(casey);
+        riadaS = Integer.toString(riada);
+        higginsS = Integer.toString(higgins);
+
         //example ogf polymorphism
         r.description();
 
@@ -362,17 +416,37 @@ public final class president2GUI extends javax.swing.JFrame {
         gallagherBT.setVisible(false);
         riadaBT.setVisible(false);
 
-        //stroing data into an array
-        vote[0] = casey;
-        vote[1] = higgins;
-        vote[2] = riada;
-        vote[3] = gallagher;
+        //writing to a file
+        File outFile;
+        FileWriter fw;
+        BufferedWriter bw;
+
+        outFile = new File("vote.txt");
+
+        try {
+            fw = new FileWriter(outFile);
+            bw = new BufferedWriter(fw);
+            fw.write(gallagherS);
+            fw.write(caseyS);
+            fw.write(higginsS);
+            fw.write(riadaS);
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "opps didnt work");
+        }
+
+
     }//GEN-LAST:event_riadaBTActionPerformed
 
     private void higginsBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_higginsBTActionPerformed
         //takig vote in and converting it to string
         higgins = higgins + 1;
+        gallagherS = Integer.toString(gallagher);
+        caseyS = Integer.toString(casey);
+        riadaS = Integer.toString(riada);
         higginsS = Integer.toString(higgins);
+
         //example ogf polymorphism
         h.description();
 
@@ -382,22 +456,61 @@ public final class president2GUI extends javax.swing.JFrame {
         gallagherBT.setVisible(false);
         riadaBT.setVisible(false);
 
-        //stroing data into an array
-        vote[0] = casey;
-        vote[1] = higgins;
-        vote[2] = riada;
-        vote[3] = gallagher;
+        //writing to a file
+        File outFile;
+        FileWriter fw;
+        BufferedWriter bw;
+
+        outFile = new File("vote.txt");
+
+        try {
+            fw = new FileWriter(outFile);
+            bw = new BufferedWriter(fw);
+            fw.write(gallagherS);
+            fw.write(caseyS);
+            fw.write(higginsS);
+            fw.write(riadaS);
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "opps didnt work");
+        }
+
+
     }//GEN-LAST:event_higginsBTActionPerformed
 
     private void updateBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBTActionPerformed
-        JOptionPane.showMessageDialog(null, "its working");
-        for (int i = 0; i < vote.length; i++) {
-            caseyLB.setText(Integer.toString(vote[0]));
-            higginsLB.setText(Integer.toString(vote[1]));
-            riadaLB.setText(Integer.toString(vote[2]));
-            gallagherLB.setText(Integer.toString(vote[3]));
+        //need to read from the file
+        File outFile;
+        FileReader fr;
+        BufferedReader br;
 
+        //file is being read this time
+        outFile = new File("vote.txt");
+        try {
+            fr = new FileReader(outFile);
+            br = new BufferedReader(fr);
+
+            gallagherS = br.readLine();
+
+            caseyS = br.readLine();
+
+            higginsS = br.readLine();
+
+            riadaS = br.readLine();
+
+            br.close();
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        gallagherLB.setText(gallagherS);
+        caseyLB.setText(caseyS);
+        higginsLB.setText(higginsS);
+        riadaLB.setText(riadaS);
 
     }//GEN-LAST:event_updateBTActionPerformed
 
