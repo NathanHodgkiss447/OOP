@@ -16,111 +16,70 @@ import javax.swing.JOptionPane;
 public class candidate {
 
     //Data
-    private String name;
-    private int age;
-    private String sex;
-    private String party;
-    protected String caseyS;
-    protected String gallagherS;
-    protected String higginsS;
-    protected String riadaS;
-
+    
+    public String nameU;
+    public String ageU;
+    public String pps;
+    
+    
+    
     //Constructor
     public candidate() {
-        name = "";
-        age = 0;
-        sex = "";
-        party = "";
-        riadaS = "6";
-        gallagherS = "2";
-        higginsS = "8";
-        caseyS = "5";
+        
+        nameU = "a";
+        ageU = "";
+        pps = "12";
     }
+    
+    
 
     //Super constructor
-    public candidate(String name, int age, String sex, String party, String caseyS, String gallagherS, String higginsS, String riadaS) {
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-        this.party = party;
-        this.caseyS = caseyS;
-        this.gallagherS = gallagherS;
-        this.higginsS = higginsS;
-        this.riadaS = riadaS;
+
+    public candidate(String nameU, String ageU, String pps) {
+        this.nameU = nameU;
+        this.ageU = ageU;
+        this.pps = pps;
     }
+
+   
+
+    
+
+   
+
+   
+   
 
     //polymorphism
     public void description(){
         JOptionPane.showMessageDialog(null,"now you are entering the vote page");
     }
     
+    //set and get
+    public String getNameU() {    
+        return nameU;
+    }
+
+    public void setNameU(String nameU) {
+        this.nameU = nameU;
+    }
+
+    public String getAgeU() {
+        return ageU;
+    }
+
+    public void setAgeU(String ageU) {
+        this.ageU = ageU;
+    }
+
+    public String getPps() {
+        return pps;
+    }
+
     
+    public void setPps(String pps) {
+        this.pps = pps;
+    }
+
     
-
-    //set
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public void setParty(String party) {
-        this.party = party;
-    }
-
-    //get
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public String getParty() {
-        return party;
-    }
-
-    public String getCaseyS() {
-        return caseyS;
-    }
-
-    public void setCaseyS(String caseyS) {
-        this.caseyS = caseyS;
-    }
-
-    public String getGallagherS() {
-        return gallagherS;
-    }
-
-    public void setGallagherS(String gallagherS) {
-        this.gallagherS = gallagherS;
-    }
-
-    public String getHigginsS() {
-        return higginsS;
-    }
-
-    public void setHigginsS(String higginsS) {
-        this.higginsS = higginsS;
-    }
-
-    public String getRiadaS() {
-        return riadaS;
-    }
-
-    public void setRiadaS(String riadaS) {
-        this.riadaS = riadaS;
-    }
-
 }

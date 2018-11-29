@@ -23,11 +23,15 @@ public class casey extends candidate {
     }
 
     //Super Constructor
-    public casey(String policy, String budget, String name, int age, String sex, String party, String caseyS, String gallagherS, String higginsS, String riadaS) {
-        super(name, age, sex, party, caseyS, gallagherS, higginsS, riadaS);
+ 
+    public casey(String policy, String budget, String nameU, String ageU, String pps) {
+        super(nameU, ageU, pps);
         this.policy = policy;
         this.budget = budget;
     }
+
+   
+    
    
 
        @Override

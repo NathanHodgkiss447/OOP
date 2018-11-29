@@ -25,11 +25,16 @@ public class riada extends candidate{
     
     //Super Constructor
 
-    public riada(String policy, String advertisement, String name, int age, String sex, String party, String caseyS, String gallagherS, String higginsS, String riadaS) {
-        super(name, age, sex, party, caseyS, gallagherS, higginsS, riadaS);
+    public riada(String policy, String advertisement, String nameU, String ageU, String pps) {
+        super(nameU, ageU, pps);
         this.policy = policy;
         this.advertisement = advertisement;
     }
+
+   
+
+   
+    
     
     
     //example of polymorphism
