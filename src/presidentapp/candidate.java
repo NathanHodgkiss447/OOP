@@ -52,7 +52,7 @@ public class candidate {
 
     //polymorphism
     public void description(){
-        JOptionPane.showMessageDialog(null,"now you are entering the vote page");
+        JOptionPane.showMessageDialog(null,"You are now entering the voting page!");
     }
     
     //set and get
