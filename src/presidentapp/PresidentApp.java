@@ -18,14 +18,7 @@ public class PresidentApp {
         // TODO code application logic here
         presidentGUI myGUI = new presidentGUI();
         myGUI.setVisible(true);
-        
-        
-        
-        
-          
 
-       
-        
     }
 
 }

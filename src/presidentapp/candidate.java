@@ -7,8 +7,6 @@ package presidentapp;
 
 import javax.swing.JOptionPane;
 
-
-
 /**
  *
  * @author x17381176
@@ -16,47 +14,32 @@ import javax.swing.JOptionPane;
 public class candidate {
 
     //Data
-    
     public String nameU;
     public String ageU;
     public String pps;
-    
-    
-    
+
     //Constructor
     public candidate() {
-        
+
         nameU = "a";
         ageU = "";
         pps = "12";
     }
-    
-    
 
     //Super constructor
-
     public candidate(String nameU, String ageU, String pps) {
         this.nameU = nameU;
         this.ageU = ageU;
         this.pps = pps;
     }
 
-   
-
-    
-
-   
-
-   
-   
-
     //polymorphism
-    public void description(){
-        JOptionPane.showMessageDialog(null,"You are now entering the voting page!");
+    public void description() {
+        JOptionPane.showMessageDialog(null, "You are now entering the voting page!");
     }
-    
+
     //set and get
-    public String getNameU() {    
+    public String getNameU() {
         return nameU;
     }
 
@@ -76,10 +59,8 @@ public class candidate {
         return pps;
     }
 
-    
     public void setPps(String pps) {
         this.pps = pps;
     }
 
-    
 }

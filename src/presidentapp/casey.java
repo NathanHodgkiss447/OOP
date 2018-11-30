@@ -23,20 +23,15 @@ public class casey extends candidate {
     }
 
     //Super Constructor
- 
     public casey(String policy, String budget, String nameU, String ageU, String pps) {
         super(nameU, ageU, pps);
         this.policy = policy;
         this.budget = budget;
     }
 
-   
-    
-   
-
-       @Override
-    public void description(){
-        JOptionPane.showMessageDialog(null,"Thank you for voting for Casey");
+    @Override
+    public void description() {
+        JOptionPane.showMessageDialog(null, "Thank you for voting for Casey");
     }
 
     //Set & Get Methods

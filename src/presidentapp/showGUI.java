@@ -17,34 +17,29 @@ public class showGUI extends javax.swing.JFrame {
     /**
      * Creates new form showGUI
      */
-    
     String list = "";
-    
+
     public showGUI() {
         initComponents();
-        
+
     }
-    
-     public showGUI(ArrayList<presidentGUI> list) {
+
+    public showGUI(ArrayList<presidentGUI> list) {
         initComponents();
         showData(list);
     }
 
-   
-     void showData(ArrayList<presidentGUI> list)
-     {
-         //adding arraylist to the row to the table
+    void showData(ArrayList<presidentGUI> list) {
+        //adding arraylist to the row to the table
         DefaultTableModel model = (DefaultTableModel) confirmTB.getModel();
         Object rowData[] = new Object[3];
-        for(int i = 0; i<list.size();i++)
-        {
-          rowData[0] = list.get(i).nameU;
-          rowData[1] = list.get(i).age;
-          rowData[2] = list.get(i).pps;
-          model.addRow(rowData);
+        for (int i = 0; i < list.size(); i++) {
+            rowData[0] = list.get(i).nameU;
+            rowData[1] = list.get(i).age;
+            rowData[2] = list.get(i).pps;
+            model.addRow(rowData);
         }
-     }
-
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

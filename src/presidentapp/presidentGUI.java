@@ -45,16 +45,13 @@ public class presidentGUI extends javax.swing.JFrame {
 
     }
 
-   //Super Constructor/array
-    public presidentGUI(String nameU,String pps,String age){
+    //Super Constructor/array
+    public presidentGUI(String nameU, String pps, String age) {
         this.nameU = nameU;
         this.age = age;
         this.pps = pps;
     }
-    
 
-
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -171,9 +168,6 @@ public class presidentGUI extends javax.swing.JFrame {
         pps = ppsT.getText();
         ageU = Integer.parseInt(ageT.getText());
         age = Integer.toString(ageU);
-        
-       
-        
 
         //Validating inputs
         if (nameU.length() > 0) {
@@ -181,47 +175,38 @@ public class presidentGUI extends javax.swing.JFrame {
                 if (pps.charAt(7) == 'A' || pps.charAt(7) == 'B' || pps.charAt(7) == 'C' || pps.charAt(7) == 'D' || pps.charAt(7) == 'E' || pps.charAt(7) == 'F' || pps.charAt(7) == 'G' || pps.charAt(7) == 'H' || pps.charAt(7) == 'I' || pps.charAt(7) == 'J' || pps.charAt(7) == 'K' || pps.charAt(7) == 'L' || pps.charAt(7) == 'M'
                         || pps.charAt(7) == 'N' || pps.charAt(7) == 'O' || pps.charAt(7) == 'P' || pps.charAt(7) == 'Q' || pps.charAt(7) == 'R' || pps.charAt(7) == 'S' || pps.charAt(7) == 'T' || pps.charAt(7) == 'U' || pps.charAt(7) == 'V' || pps.charAt(7) == 'W' || pps.charAt(7) == 'X' || pps.charAt(7) == 'Y' || pps.charAt(7) == 'Z') {
 
-                    if (ageU >= 18 && ageU<=200 ) {
+                    if (ageU >= 18 && ageU <= 200) {
 
                         //arraylist
                         ArrayList<presidentGUI> list = new ArrayList<>();
-                        presidentGUI  p1 = new presidentGUI(nameU,pps,age);
+                        presidentGUI p1 = new presidentGUI(nameU, pps, age);
                         list.add(p1);
-                       
-                        
-                        
+
                         new showGUI(list).setVisible(true);
-                        
+
                         this.dispose();
-                        
-                        
+
                     } else {
                         JOptionPane.showMessageDialog(null, "Enter valid age");
 
-                        
                     }
 
                 } else {
                     JOptionPane.showMessageDialog(null, "Last digit must be a letter.");
 
-                    
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "PPS must be 8 digits long.");
-
 
             }
 
         } else {
             JOptionPane.showMessageDialog(null, "Please enter your name.");
 
-            
-
         }
 
 
     }//GEN-LAST:event_submitBtnActionPerformed
-
 
     /**
      * @param args the command line arguments

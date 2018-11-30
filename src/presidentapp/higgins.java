@@ -24,15 +24,11 @@ public class higgins extends candidate {
     }
 
     //Super Constructor
-
     public higgins(String policy, Double budget, String nameU, String ageU, String pps) {
         super(nameU, ageU, pps);
         this.policy = policy;
         this.budget = budget;
     }
-
-    
-    
 
     @Override
     public void description() {

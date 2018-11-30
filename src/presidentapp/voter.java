@@ -10,28 +10,25 @@ package presidentapp;
  * @author x17381176
  */
 public class voter {
+
     //Data
     public String nameU;
     public String pps;
     public int ageU;
-    
+
     //Constructor
-    public voter(){
-        nameU="";
-        pps="";
-        ageU=0;
+    public voter() {
+        nameU = "";
+        pps = "";
+        ageU = 0;
     }
-
-
 
     public voter(String nameU, String pps, int ageU) {
         this.nameU = nameU;
         this.pps = pps;
         this.ageU = ageU;
     }
-    
-    
-    
+
     //Set & Get methods
     public String getNameU() {
         return nameU;
@@ -56,8 +53,5 @@ public class voter {
     public void setAgeU(int ageU) {
         this.ageU = ageU;
     }
-   
-    
-    
-    
+
 }

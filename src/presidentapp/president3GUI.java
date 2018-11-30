@@ -9,26 +9,20 @@ import javax.swing.*;
 
 /**
  *
- * @author 
+ * @author
  */
 public class president3GUI extends javax.swing.JFrame {
-    
-    
-        
-        
-
 
     /**
      * Creates new form presidentGUI3
      */
     //object
-    candidate c1 =new candidate();
-    
+    candidate c1 = new candidate();
+
     public president3GUI() {
         initComponents();
     }
-    
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -244,62 +238,56 @@ public class president3GUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
         c1.description();
-        
-        president2GUI P2=new president2GUI();
-    
+
+        president2GUI P2 = new president2GUI();
+
         P2.setVisible(true);
-        
-        
-        
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-       
-        
-        String itemSelected=jComboBox1.getSelectedItem()+"";
-        LabelL.setText( itemSelected );
+
+        String itemSelected = jComboBox1.getSelectedItem() + "";
+        LabelL.setText(itemSelected);
         String Information = "";
-        
-        if (itemSelected.equals("Higgins"))
-        {
-           LabelL.setText("Michael D.Higgins");
-           LabelL1.setText("77");
-           LabelL2.setText("Male");
-           LabelL3.setText("Independent");
-           LabelL4.setText("A president for us all");
-           LabelL5.setText("€75000");
+
+        if (itemSelected.equals("Higgins")) {
+            LabelL.setText("Michael D.Higgins");
+            LabelL1.setText("77");
+            LabelL2.setText("Male");
+            LabelL3.setText("Independent");
+            LabelL4.setText("A president for us all");
+            LabelL5.setText("€75000");
         }
-        
-        if (itemSelected.equals("Gallagher"))
-        {
-           LabelL.setText("Sean Gallagher");
-           LabelL1.setText("56");
-           LabelL2.setText("Male");
-           LabelL3.setText("Non-Party");
-           LabelL4.setText("Shaping our future together");
-           LabelL5.setText("€200000");
+
+        if (itemSelected.equals("Gallagher")) {
+            LabelL.setText("Sean Gallagher");
+            LabelL1.setText("56");
+            LabelL2.setText("Male");
+            LabelL3.setText("Non-Party");
+            LabelL4.setText("Shaping our future together");
+            LabelL5.setText("€200000");
         }
-        
-         if (itemSelected.equals("Casey"))
-        {
-           LabelL.setText("Peter Casey");
-           LabelL1.setText("60");
-           LabelL2.setText("Male");
-           LabelL3.setText("Independent");
-           LabelL4.setText("Small country, Big Nation");
-           LabelL5.setText("€100000");
+
+        if (itemSelected.equals("Casey")) {
+            LabelL.setText("Peter Casey");
+            LabelL1.setText("60");
+            LabelL2.setText("Male");
+            LabelL3.setText("Independent");
+            LabelL4.setText("Small country, Big Nation");
+            LabelL5.setText("€100000");
         }
-         
-         if (itemSelected.equals("Riada"))
-        {
+
+        if (itemSelected.equals("Riada")) {
             LabelL.setText("Liadh Ní Riada");
-           LabelL1.setText("51");
-           LabelL2.setText("Female");
-           LabelL3.setText("Sinn Fein");
-           LabelL4.setText("New president for a new Ireland");
-           LabelL5.setText("€70000");
+            LabelL1.setText("51");
+            LabelL2.setText("Female");
+            LabelL3.setText("Sinn Fein");
+            LabelL4.setText("New president for a new Ireland");
+            LabelL5.setText("€70000");
         }
-        
+
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
@@ -363,5 +351,4 @@ public class president3GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 
-   
 }
