@@ -17,7 +17,6 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -44,35 +43,53 @@ public class president2GUI extends javax.swing.JFrame {
     riada r = new riada();
     higgins h = new higgins();
     gallagher g = new gallagher();
-   
 
     public president2GUI() {
 
         initComponents();
 
     }
-    
-    
 
     public president2GUI(String nameU, String pps, String ageU) {
         this.nameU = nameU;
         this.pps = pps;
         this.ageU = ageU;
-        
+
     }
-    
-    
 
- 
-    
-    
-    
-    
+    public void File() {
 
-   
+        //writing to a file
+        File outFile;
+        FileWriter fw;
+        BufferedWriter bw;
 
-  
-    
+        outFile = new File("vote.txt");
+
+        // creating a string array
+        ArrayList<String> list = new ArrayList<>();
+        list.add(  gallagherS);
+        list.add( caseyS);
+        list.add(  riadaS);
+        list.add( higginsS);
+
+        try {
+            fw = new FileWriter(outFile);
+            bw = new BufferedWriter(fw);
+            for (int i = 0; i < list.size(); i++) {
+                fw.write(list.get(i) + "\n");
+            }
+
+            fw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "opps didnt work");
+
+        }
+
+    }
+
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -93,6 +110,7 @@ public class president2GUI extends javax.swing.JFrame {
         caseyLB = new javax.swing.JLabel();
         riadaLB = new javax.swing.JLabel();
         gallagherLB = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -113,6 +131,7 @@ public class president2GUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 0, 24)); // NOI18N
         jLabel1.setText("Vote Form");
 
+        caseyBT.setForeground(new java.awt.Color(255, 0, 0));
         caseyBT.setText("Casey");
         caseyBT.setPreferredSize(new java.awt.Dimension(60, 30));
         caseyBT.addActionListener(new java.awt.event.ActionListener() {
@@ -121,6 +140,7 @@ public class president2GUI extends javax.swing.JFrame {
             }
         });
 
+        higginsBT.setForeground(new java.awt.Color(255, 0, 51));
         higginsBT.setText("Higgins");
         higginsBT.setPreferredSize(new java.awt.Dimension(60, 30));
         higginsBT.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +149,7 @@ public class president2GUI extends javax.swing.JFrame {
             }
         });
 
+        riadaBT.setForeground(new java.awt.Color(255, 0, 0));
         riadaBT.setText("Riada");
         riadaBT.setPreferredSize(new java.awt.Dimension(60, 30));
         riadaBT.addActionListener(new java.awt.event.ActionListener() {
@@ -137,6 +158,7 @@ public class president2GUI extends javax.swing.JFrame {
             }
         });
 
+        gallagherBT.setForeground(new java.awt.Color(255, 0, 0));
         gallagherBT.setText("Gallagher");
         gallagherBT.setPreferredSize(new java.awt.Dimension(60, 30));
         gallagherBT.addActionListener(new java.awt.event.ActionListener() {
@@ -145,7 +167,7 @@ public class president2GUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         jLabel2.setText("     Vote for :");
 
         jLabel4.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 14)); // NOI18N
@@ -161,6 +183,7 @@ public class president2GUI extends javax.swing.JFrame {
         jLabel7.setText("Casey    =");
 
         updateBT.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 14)); // NOI18N
+        updateBT.setForeground(new java.awt.Color(0, 255, 51));
         updateBT.setText("Update vote count");
         updateBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +203,9 @@ public class president2GUI extends javax.swing.JFrame {
         gallagherLB.setFont(new java.awt.Font("Franklin Gothic Medium", 0, 14)); // NOI18N
         gallagherLB.setText("2");
 
+        jLabel3.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
+        jLabel3.setText("     Vote count :");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -191,7 +217,7 @@ public class president2GUI extends javax.swing.JFrame {
                     .addComponent(riadaBT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(caseyBT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(gallagherBT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,10 +232,12 @@ public class president2GUI extends javax.swing.JFrame {
                             .addComponent(caseyLB, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(riadaLB, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(updateBT, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43))
+                .addContainerGap(23, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(197, 197, 197))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
             .addGroup(layout.createSequentialGroup()
                 .addGap(132, 132, 132)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -221,11 +249,12 @@ public class president2GUI extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addComponent(caseyBT, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(riadaBT, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -234,7 +263,6 @@ public class president2GUI extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(higginsBT, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(higginsLB, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -280,25 +308,7 @@ public class president2GUI extends javax.swing.JFrame {
         Scanner s = new Scanner(System.in);
 
         //writing to a file
-        File outFile;
-        FileWriter fw;
-        BufferedWriter bw;
-
-        outFile = new File("vote.txt");
-
-        try {
-            fw = new FileWriter(outFile);
-            bw = new BufferedWriter(fw);
-            fw.write(gallagherS);
-            fw.write(caseyS);
-            fw.write(higginsS);
-            fw.write(riadaS);
-            fw.close();
-        } catch (IOException ex) {
-            Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "opps didnt work");
-        }
-
+        File();
 
     }//GEN-LAST:event_gallagherBTActionPerformed
 
@@ -319,25 +329,7 @@ public class president2GUI extends javax.swing.JFrame {
         riadaBT.setVisible(false);
 
         //writing to a file
-        File outFile;
-        FileWriter fw;
-        BufferedWriter bw;
-
-        outFile = new File("vote.txt");
-
-        try {
-            fw = new FileWriter(outFile);
-            bw = new BufferedWriter(fw);
-            fw.write(gallagherS);
-            fw.write(caseyS);
-            fw.write(higginsS);
-            fw.write(riadaS);
-            fw.close();
-        } catch (IOException ex) {
-            Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "opps didnt work");
-        }
-
+        File();
 
     }//GEN-LAST:event_caseyBTActionPerformed
 
@@ -359,24 +351,7 @@ public class president2GUI extends javax.swing.JFrame {
         riadaBT.setVisible(false);
 
         //writing to a file
-        File outFile;
-        FileWriter fw;
-        BufferedWriter bw;
-
-        outFile = new File("vote.txt");
-
-        try {
-            fw = new FileWriter(outFile);
-            bw = new BufferedWriter(fw);
-            fw.write(gallagherS);
-            fw.write(caseyS);
-            fw.write(higginsS);
-            fw.write(riadaS);
-            fw.close();
-        } catch (IOException ex) {
-            Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "opps didnt work");
-        }
+        File();
 
 
     }//GEN-LAST:event_riadaBTActionPerformed
@@ -399,24 +374,7 @@ public class president2GUI extends javax.swing.JFrame {
         riadaBT.setVisible(false);
 
         //writing to a file
-        File outFile;
-        FileWriter fw;
-        BufferedWriter bw;
-
-        outFile = new File("vote.txt");
-
-        try {
-            fw = new FileWriter(outFile);
-            bw = new BufferedWriter(fw);
-            fw.write(gallagherS);
-            fw.write(caseyS);
-            fw.write(higginsS);
-            fw.write(riadaS);
-            fw.close();
-        } catch (IOException ex) {
-            Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "opps didnt work");
-        }
+        File();
 
 
     }//GEN-LAST:event_higginsBTActionPerformed
@@ -433,13 +391,10 @@ public class president2GUI extends javax.swing.JFrame {
             fr = new FileReader(outFile);
             br = new BufferedReader(fr);
 
-            gallagherS = br.readLine();
-
-            caseyS = br.readLine();
-
-            higginsS = br.readLine();
-
-            riadaS = br.readLine();
+            gallagherLB.setText(br.readLine());
+            caseyLB.setText(br.readLine());
+            riadaLB.setText(br.readLine());
+            higginsLB.setText(br.readLine());
 
             br.close();
 
@@ -449,12 +404,6 @@ public class president2GUI extends javax.swing.JFrame {
             Logger.getLogger(president2GUI.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        gallagherLB.setText(gallagherS);
-        caseyLB.setText(caseyS);
-        higginsLB.setText(higginsS);
-        riadaLB.setText(riadaS);
-        
-      
 
     }//GEN-LAST:event_updateBTActionPerformed
 
@@ -505,6 +454,7 @@ public class president2GUI extends javax.swing.JFrame {
     private javax.swing.JLabel higginsLB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
