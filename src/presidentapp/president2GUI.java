@@ -63,11 +63,7 @@ public class president2GUI extends javax.swing.JFrame {
     
     
 
-    //Array list
-
-   
-    
-    //constructor
+ 
     
     
     
@@ -75,17 +71,7 @@ public class president2GUI extends javax.swing.JFrame {
 
    
 
-    public void setNameU(String nameU) {
-        this.nameU = nameU;
-    }
-
-    public void setPps(String pps) {
-        this.pps = pps;
-    }
-
-    public void setAgeU(String ageU) {
-        this.ageU = ageU;
-    }
+  
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -214,7 +200,7 @@ public class president2GUI extends javax.swing.JFrame {
                     .addComponent(riadaBT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(caseyBT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(gallagherBT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 258, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,15 +217,16 @@ public class president2GUI extends javax.swing.JFrame {
                     .addComponent(updateBT, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42))
             .addGroup(layout.createSequentialGroup()
-                .addGap(251, 251, 251)
+                .addGap(224, 224, 224)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 231, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
@@ -476,9 +463,7 @@ public class president2GUI extends javax.swing.JFrame {
         higginsLB.setText(higginsS);
         riadaLB.setText(riadaS);
         
-        JOptionPane.showMessageDialog(null,nameU);
-        JOptionPane.showMessageDialog(null,ageU);
-        JOptionPane.showMessageDialog(null,pps);
+      
 
     }//GEN-LAST:event_updateBTActionPerformed
 
