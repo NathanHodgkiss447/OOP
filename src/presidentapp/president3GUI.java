@@ -9,7 +9,7 @@ import javax.swing.*;
 
 /**
  *
- * @author x17506166
+ * @author 
  */
 public class president3GUI extends javax.swing.JFrame {
     
