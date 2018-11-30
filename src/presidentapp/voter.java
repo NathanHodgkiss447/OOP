@@ -22,6 +22,8 @@ public class voter {
         ageU=0;
     }
 
+
+
     public voter(String nameU, String pps, int ageU) {
         this.nameU = nameU;
         this.pps = pps;
