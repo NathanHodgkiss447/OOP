@@ -38,7 +38,7 @@ public class candidate {
         JOptionPane.showMessageDialog(null, "You are now entering the voting page!");
     }
 
-    //set and get
+    //Set and Get methods
     public String getNameU() {
         return nameU;
     }
