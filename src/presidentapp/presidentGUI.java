@@ -45,7 +45,7 @@ public class presidentGUI extends javax.swing.JFrame {
 
     }
 
-   //user class for array
+   //Super Constructor/array
     public presidentGUI(String nameU,String pps,String age){
         this.nameU = nameU;
         this.age = age;
@@ -178,7 +178,7 @@ public class presidentGUI extends javax.swing.JFrame {
                 if (pps.charAt(7) == 'A' || pps.charAt(7) == 'B' || pps.charAt(7) == 'C' || pps.charAt(7) == 'D' || pps.charAt(7) == 'E' || pps.charAt(7) == 'F' || pps.charAt(7) == 'G' || pps.charAt(7) == 'H' || pps.charAt(7) == 'I' || pps.charAt(7) == 'J' || pps.charAt(7) == 'K' || pps.charAt(7) == 'L' || pps.charAt(7) == 'M'
                         || pps.charAt(7) == 'N' || pps.charAt(7) == 'O' || pps.charAt(7) == 'P' || pps.charAt(7) == 'Q' || pps.charAt(7) == 'R' || pps.charAt(7) == 'S' || pps.charAt(7) == 'T' || pps.charAt(7) == 'U' || pps.charAt(7) == 'V' || pps.charAt(7) == 'W' || pps.charAt(7) == 'X' || pps.charAt(7) == 'Y' || pps.charAt(7) == 'Z') {
 
-                    if (ageU >= 18) {
+                    if (ageU >= 18 && ageU<=100) {
 
                         //arraylist
                         ArrayList<presidentGUI> list = new ArrayList<>();
@@ -193,7 +193,7 @@ public class presidentGUI extends javax.swing.JFrame {
                         
                         
                     } else {
-                        JOptionPane.showMessageDialog(null, "Must be 18 or older to vote.");
+                        JOptionPane.showMessageDialog(null, "Enter valid age");
 
                         
                     }
@@ -219,18 +219,6 @@ public class presidentGUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_submitBtnActionPerformed
 
-    //Get Statements
-    public String getNameU() {
-        return nameU;
-    }
-
-    public String getPps() {
-        return pps;
-    }
-
-    public int getAgeU() {
-        return ageU;
-    }
 
     /**
      * @param args the command line arguments
