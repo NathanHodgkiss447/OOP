@@ -70,7 +70,7 @@ public class presidentGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
         jLabel1.setText("User Information");
 
         nameL.setFont(new java.awt.Font("Franklin Gothic Book", 0, 16)); // NOI18N
