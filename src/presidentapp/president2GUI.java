@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author x17381176
+ * @author Piyush sharma, x17342356
  */
 public class president2GUI extends javax.swing.JFrame {
 
@@ -50,6 +50,7 @@ public class president2GUI extends javax.swing.JFrame {
 
     }
 
+    //constructor
     public president2GUI(String nameU, String pps, String ageU) {
         this.nameU = nameU;
         this.pps = pps;
@@ -57,24 +58,31 @@ public class president2GUI extends javax.swing.JFrame {
 
     }
 
+    /*file method to take input 
+    and writer it into an 
+    ecternal file using a string array*/
     public void File() {
+        
+        /*
+        *@reference https://www.youtube.com/watch?v=VE0HeWFaAIQ
+        */
 
         //writing to a file
-        File outFile;
+        File oF;
         FileWriter fw;
         BufferedWriter bw;
 
-        outFile = new File("vote.txt");
+        oF = new File("vote.txt");
 
         // creating a string array
         ArrayList<String> list = new ArrayList<>();
-        list.add(  gallagherS);
-        list.add( caseyS);
-        list.add(  riadaS);
-        list.add( higginsS);
+        list.add(gallagherS);
+        list.add(caseyS);
+        list.add(riadaS);
+        list.add(higginsS);
 
         try {
-            fw = new FileWriter(outFile);
+            fw = new FileWriter(oF);
             bw = new BufferedWriter(fw);
             for (int i = 0; i < list.size(); i++) {
                 fw.write(list.get(i) + "\n");
@@ -295,7 +303,7 @@ public class president2GUI extends javax.swing.JFrame {
         riadaS = Integer.toString(riada);
         higginsS = Integer.toString(higgins);
 
-        //example ogf polymorphism
+        //example of polymorphism
         g.description();
 
         //making voting pole disapear
@@ -319,7 +327,7 @@ public class president2GUI extends javax.swing.JFrame {
         caseyS = Integer.toString(casey);
         riadaS = Integer.toString(riada);
         higginsS = Integer.toString(higgins);
-        //example ogf polymorphism
+        //example of polymorphism
         c2.description();
 
         //making voting pole disapear
@@ -341,7 +349,7 @@ public class president2GUI extends javax.swing.JFrame {
         riadaS = Integer.toString(riada);
         higginsS = Integer.toString(higgins);
 
-        //example ogf polymorphism
+        //example of polymorphism
         r.description();
 
         //making voting pole disapear
@@ -364,7 +372,7 @@ public class president2GUI extends javax.swing.JFrame {
         riadaS = Integer.toString(riada);
         higginsS = Integer.toString(higgins);
 
-        //example ogf polymorphism
+        //example of polymorphism
         h.description();
 
         //making voting pole disapear
@@ -381,14 +389,14 @@ public class president2GUI extends javax.swing.JFrame {
 
     private void updateBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBTActionPerformed
         //need to read from the file
-        File outFile;
+        File oF;
         FileReader fr;
         BufferedReader br;
 
         //file is being read this time
-        outFile = new File("vote.txt");
+        oF = new File("vote.txt");
         try {
-            fr = new FileReader(outFile);
+            fr = new FileReader(oF);
             br = new BufferedReader(fr);
 
             gallagherLB.setText(br.readLine());

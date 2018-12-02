@@ -5,8 +5,6 @@
  */
 package presidentapp;
 
-import javax.swing.*;
-
 /**
  *
  * @author

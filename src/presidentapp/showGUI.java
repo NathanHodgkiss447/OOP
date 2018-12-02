@@ -10,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author piyus
+ * @author piyush sharma, x17342356
  */
 public class showGUI extends javax.swing.JFrame {
 
@@ -30,6 +30,10 @@ public class showGUI extends javax.swing.JFrame {
     }
 
     void showData(ArrayList<presidentGUI> list) {
+        /*
+        *@reference https://www.youtube.com/watch?v=GAl1FSKvoFY&t=380s
+        */
+        
         //adding arraylist to the row to the table
         DefaultTableModel model = (DefaultTableModel) confirmTB.getModel();
         Object rowData[] = new Object[3];

@@ -177,7 +177,10 @@ public class presidentGUI extends javax.swing.JFrame {
 
                     if (ageU >= 18 && ageU <= 200) {
 
-                        //arraylist
+                        /*
+                         *@reference https://www.youtube.com/watch?v=GAl1FSKvoFY&t=380s
+                         */
+                         //arraylist
                         ArrayList<presidentGUI> list = new ArrayList<>();
                         presidentGUI p1 = new presidentGUI(nameU, pps, age);
                         list.add(p1);
