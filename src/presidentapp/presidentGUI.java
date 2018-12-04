@@ -1,16 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package presidentapp;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author x17381176
+/*
+ * @author Piyush sharma, x17342356
+ * @author Dylan Murphy, x17506166
+ * @author Nathan Hodgkiss, x17381176
  */
 public class presidentGUI extends javax.swing.JFrame {
 
@@ -180,7 +176,7 @@ public class presidentGUI extends javax.swing.JFrame {
                         /*
                          *@reference https://www.youtube.com/watch?v=GAl1FSKvoFY&t=380s
                          */
-                         //arraylist
+                        //arraylist
                         ArrayList<presidentGUI> list = new ArrayList<>();
                         presidentGUI p1 = new presidentGUI(nameU, pps, age);
                         list.add(p1);

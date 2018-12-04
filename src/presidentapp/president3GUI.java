@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package presidentapp;
 
-/**
- *
- * @author
+/*
+ * @author Piyush sharma, x17342356
+ * @author Dylan Murphy, x17506166
+ * @author Nathan Hodgkiss, x17381176
  */
 public class president3GUI extends javax.swing.JFrame {
 

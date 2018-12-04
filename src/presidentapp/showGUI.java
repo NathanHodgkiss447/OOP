@@ -1,16 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package presidentapp;
 
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author piyush sharma, x17342356
+/*
+ * @author Piyush sharma, x17342356
+ * @author Dylan Murphy, x17506166
+ * @author Nathan Hodgkiss, x17381176
  */
 public class showGUI extends javax.swing.JFrame {
 
@@ -32,8 +28,8 @@ public class showGUI extends javax.swing.JFrame {
     void showData(ArrayList<presidentGUI> list) {
         /*
         *@reference https://www.youtube.com/watch?v=GAl1FSKvoFY&t=380s
-        */
-        
+         */
+
         //adding arraylist to the row to the table
         DefaultTableModel model = (DefaultTableModel) confirmTB.getModel();
         Object rowData[] = new Object[3];
